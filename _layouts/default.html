@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <div class="site-wrapper">
+    <header class="site-header">
+      <span class="site-title">
+        <span class="title-line">Mythic Bastionland</span>
+        <span class="title-line title-main">Journals</span>
+      </span>
+      <div class="site-subtitle">{{ site.description }}</div>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+    <footer class="site-footer">
+      Mythic Bastionland Journals &middot; Choose a realm to explore
+    </footer>
+  </div>
+</body>
+</html>

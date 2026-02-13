@@ -1,0 +1,13 @@
+title: "Mythic Bastionland Journals"
+description: "Campaign journals from the realms of Braeburn, Cloverfell, and Fern Gully."
+baseurl: ""
+url: ""
+
+exclude:
+  - braeburn
+  - cloverfell
+  - ferngully
+
+markdown: kramdown
+kramdown:
+  input: GFM

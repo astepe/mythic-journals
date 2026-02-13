@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<h1 class="page-title">{{ page.title }}</h1>
+<p class="page-description">{{ page.description }}</p>
+
+{{ content }}
+
+<hr>
+
+<nav class="site-nav" style="justify-content: space-between; border: none; margin-top: 2rem;">
+  {% if page.previous_chapter %}
+    <a href="{{ page.previous_chapter | relative_url }}">&larr; Previous Chapter</a>
+  {% else %}
+    <span></span>
+  {% endif %}
+  <a href="{{ '/chapters/' | relative_url }}">All Chapters</a>
+  {% if page.next_chapter %}
+    <a href="{{ page.next_chapter | relative_url }}">Next Chapter &rarr;</a>
+  {% else %}
+    <span></span>
+  {% endif %}
+</nav>

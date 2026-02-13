@@ -1,0 +1,22 @@
+title: "Ballads of Braeburn"
+description: "A Mythic Bastionland Campaign Journal"
+baseurl: "/braeburn"
+url: ""
+# When served as part of the combined site, link back to the realm picker (set to "/mythic-journals" if using a project subpath)
+parent_site_root: "/"
+
+collections:
+  chapters:
+    output: true
+    permalink: /chapters/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "chapters"
+    values:
+      layout: "chapter"
+
+markdown: kramdown
+kramdown:
+  input: GFM
