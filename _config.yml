@@ -1,7 +1,8 @@
 title: "Mythic Bastionland Journals"
 description: "Campaign journals from the realms of Braeburn, Cloverfell, and Fern Gully."
-baseurl: ""
-url: ""
+# Must match GitHub Pages path: https://astepe.github.io/mythic-journals/
+baseurl: "/mythic-journals"
+url: "https://astepe.github.io"
 
 exclude:
   - braeburn

@@ -1,9 +1,9 @@
 title: "Chronicles of Cloverfell"
 description: "A Mythic Bastionland Campaign Journal"
-baseurl: "/cloverfell"
-url: ""
-# When served as part of the combined site, link back to the realm picker (set to "/mythic-journals" if using a project subpath)
-parent_site_root: "/"
+# Full path when deployed at GitHub Pages: /mythic-journals/cloverfell
+baseurl: "/mythic-journals/cloverfell"
+url: "https://astepe.github.io"
+parent_site_root: "/mythic-journals"
 
 collections:
   chapters:
