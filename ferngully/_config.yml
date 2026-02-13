@@ -1,4 +1,6 @@
 title: "Fern Gully Annals"
+realm_title_line1: "Fern Gully"
+realm_title_line2: "Annals"
 description: "A Mythic Bastionland Campaign Journal"
 # Full path when deployed at GitHub Pages: /mythic-journals/ferngully
 baseurl: "/mythic-journals/ferngully"

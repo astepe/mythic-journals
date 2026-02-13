@@ -1,4 +1,6 @@
 title: "Ballads of Braeburn"
+realm_title_line1: "Ballads of"
+realm_title_line2: "Braeburn"
 description: "A Mythic Bastionland Campaign Journal"
 # Full path when deployed at GitHub Pages: /mythic-journals/braeburn
 baseurl: "/mythic-journals/braeburn"
@@ -8,6 +10,7 @@ parent_site_root: "/mythic-journals"
 collections:
   chapters:
     output: true
+    sort_by: chapter_number
     permalink: /chapters/:slug/
 
 defaults:

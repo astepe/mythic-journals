@@ -8,6 +8,7 @@ exclude:
   - braeburn
   - cloverfell
   - ferngully
+  - _shared
 
 markdown: kramdown
 kramdown:

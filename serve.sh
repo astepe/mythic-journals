@@ -17,7 +17,7 @@ if command -v docker >/dev/null 2>&1; then
       -v "$(pwd):/var/jekyll" \
       -v mythic-journals-bundle-arm64:/usr/local/bundle \
       -w /var/jekyll mrxder/jekyll-docker-arm64:latest \
-      bash -c "bundle config set --local path /usr/local/bundle && bundle install && (cd braeburn && bundle config set --local path /usr/local/bundle && bundle install); (cd cloverfell && bundle config set --local path /usr/local/bundle && bundle install); (cd ferngully && bundle config set --local path /usr/local/bundle && bundle install); ./build.sh && echo 'Serving at http://localhost:4000/' && python3 -m http.server 4000 --directory _site"
+      bash -c "bundle config set --local path /usr/local/bundle && bundle install && ./build.sh && echo 'Serving at http://localhost:4000/' && python3 -m http.server 4000 --directory _site"
     exit 0
   else
     echo "Docker is installed but the daemon is not running."
