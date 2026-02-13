@@ -32,12 +32,6 @@ jobs:
       - name: Install parent dependencies
         run: bundle install
 
-      - name: Install realm dependencies
-        run: |
-          (cd braeburn && bundle install)
-          (cd cloverfell && bundle install)
-          (cd ferngully && bundle install)
-
       - name: Build combined site
         run: ./build.sh
 

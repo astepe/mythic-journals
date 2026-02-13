@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Build the combined Mythic Bastionland Journals site:
 # 1. Build the parent (realm picker) into _site
-# 2. Build each realm sub-site and merge into _site/braeburn, _site/cloverfell, _site/ferngully
+# 2. Build each realm directly into _site/<realm> using root Bundler env
 
 set -e
 cd "$(dirname "$0")"
@@ -14,11 +14,12 @@ for realm in braeburn cloverfell ferngully; do
     echo "Skipping $realm (directory not found)"
     continue
   fi
-  echo "Building $realm..."
-  (cd "$realm" && bundle exec jekyll build)
-  echo "Merging $realm into _site/$realm..."
-  rm -rf "_site/$realm"
-  cp -r "$realm/_site" "_site/$realm"
+  echo "Building $realm into _site/$realm..."
+  bundle exec jekyll build \
+    --source "$realm" \
+    --destination "_site/$realm" \
+    --config "$realm/_config.yml"
 done
 
+touch _site/.nojekyll
 echo "Done. Output is in _site/"
