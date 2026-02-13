@@ -38,11 +38,14 @@ bundle exec jekyll serve
 
 Then open the root URL (e.g. `http://localhost:4000/`). Use the same `baseurl` as for production (see below) when testing.
 
-## Deploy (e.g. GitHub Pages)
+## Deploy (GitHub Pages)
 
-1. Set `baseurl` in `_config.yml` to your repo path, e.g. `baseurl: "/mythic-journals"` if the site is at `https://username.github.io/mythic-journals/`. Use `baseurl: ""` if this is your root Pages site.
-2. Build with `./build.sh`.
-3. Deploy the contents of `_site/` (e.g. push to a `gh-pages` branch or use GitHub Actions to build and deploy).
+The repo includes a workflow (`.github/workflows/deploy-pages.yml`) that runs `./build.sh` and deploys the combined `_site/` to GitHub Pages. **You must use this** so that the realm sub-sites (Braeburn, Cloverfell, Ferngully) are built and included; the default “build from branch” only builds the root and would 404 on realm links.
+
+1. In the repo: **Settings → Pages → Build and deployment → Source** choose **GitHub Actions** (not “Deploy from a branch”).
+2. Push to `main`; the workflow builds and deploys. The site will be at `https://<username>.github.io/mythic-journals/`.
+
+`baseurl` is already set to `/mythic-journals` in the configs for that URL.
 
 ## Updating a realm
 
