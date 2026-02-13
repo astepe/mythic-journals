@@ -44,6 +44,7 @@ The repo includes a workflow (`.github/workflows/deploy-pages.yml`) that runs `.
 
 1. In the repo: **Settings → Pages → Build and deployment → Source** choose **GitHub Actions** (not “Deploy from a branch”).
 2. Push to `main`; the workflow builds and deploys. The site will be at `https://<username>.github.io/mythic-journals/`.
+3. If the home page loads but realm links return 404, re-check that Pages source is still set to **GitHub Actions**.
 
 `baseurl` is already set to `/mythic-journals` in the configs for that URL.
 
