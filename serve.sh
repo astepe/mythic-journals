@@ -9,7 +9,7 @@ if command -v docker >/dev/null 2>&1; then
   if docker info >/dev/null 2>&1; then
     echo "Building and serving Mythic Bastionland Journals with Docker..."
     echo "First run may take a few minutes (building parent + braeburn + cloverfell + ferngully)."
-    echo "Open http://localhost:4000/ in your browser (realm picker)."
+    echo "Open http://localhost:4000/mythic-journals/ in your browser (realm picker)."
     echo "Press Ctrl+C to stop"
     TTY_FLAG=""
     [ -t 0 ] && [ -t 1 ] && TTY_FLAG="-it"
@@ -17,7 +17,7 @@ if command -v docker >/dev/null 2>&1; then
       -v "$(pwd):/var/jekyll" \
       -v mythic-journals-bundle-arm64:/usr/local/bundle \
       -w /var/jekyll mrxder/jekyll-docker-arm64:latest \
-      bash -c "bundle config set --local path /usr/local/bundle && bundle install && ./build.sh && echo 'Serving at http://localhost:4000/' && python3 -m http.server 4000 --directory _site"
+      bash -c "bundle config set --local path /usr/local/bundle && bundle install && ./build.sh && rm -rf _serve && mkdir -p _serve && ln -sfn /var/jekyll/_site _serve/mythic-journals && echo 'Serving at http://localhost:4000/mythic-journals/' && python3 -m http.server 4000 --directory _serve"
     exit 0
   else
     echo "Docker is installed but the daemon is not running."
@@ -30,12 +30,13 @@ fi
 if command -v bundle >/dev/null 2>&1; then
   echo "Building combined site..."
   ./build.sh
-  echo "Serving at http://localhost:4000/"
-  python3 -m http.server 4000 --directory _site
+  rm -rf _serve && mkdir -p _serve && ln -sfn "$(pwd)/_site" _serve/mythic-journals
+  echo "Serving at http://localhost:4000/mythic-journals/"
+  python3 -m http.server 4000 --directory _serve
   exit 0
 fi
 
 echo "To run the site locally, use one of:"
 echo "  1. Start Docker Desktop, then run: ./serve.sh"
-echo "  2. Install Ruby 3+ and run: ./build.sh && python3 -m http.server 4000 --directory _site"
+echo "  2. Install Ruby 3+ and run: ./build.sh && python3 -m http.server 4000 --directory _serve"
 exit 1

@@ -4,9 +4,8 @@ title: The Realm
 permalink: /the-realm/
 ---
 
-# The Realm of Fern Gully
-
-A strange and darkening land. The company has only just begun to learn its shape.
+<h1 class="page-title">The Realm of Fern Gully</h1>
+<p class="page-description">A strange and darkening land. The company has only just begun to learn its shape.</p>
 
 <p class="realm-map-wrap"><img src="{{ '/assets/images/playermap.png' | relative_url }}" alt="Map of the realm" class="realm-map" /></p>
 

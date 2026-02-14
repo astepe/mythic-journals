@@ -5,7 +5,7 @@ permalink: /the-realm/
 ---
 
 <h1 class="page-title">The Realm of Cloverfell</h1>
-<p class="page-description">What the company knows of the holdings, myths, and troubles of this land.</p>
+<p class="page-description">What the company knows of the holdings, seers, and troubles of this land.</p>
 
 <p class="realm-map-wrap"><img src="{{ '/assets/images/playermap.png' | relative_url }}" alt="Map of the realm" class="realm-map" /></p>
 
@@ -33,21 +33,13 @@ Known for its thriving spirit industry, producing the finest rye whisky in the r
 
 ---
 
-## Resolved Myths
+## Seers
 
-### The Sprite
+### Ector, the Weeping Seer
 
-It began with a fisherman. **Roose Dorka** warned the company not to trust the Lady of the Pond, even as he confessed his own otherworldly love for her. Two green pond folk fought over who she loved more — one nearly hurt Savari before being mortally wounded and carried to the water.
+**Sanctum:** A crumbling tower near the swamps east of Dome. Ector weeps constantly — not from sadness, but from some condition or compulsion the company does not understand.
 
-**Ector the Weeping Seer** gave the company conflicting guidance: do what the Lady says, but don't accept any more gifts. The Lady of the Pond had already given each knight a bucket of the purest ore.
-
-When the company entered the swamp, she found them. **Wrundil** rose from the water calling Xanthe's name, blocking their path with enormous piles of ore — a gift, she said. Xanthe refused, not wanting to owe anyone anything. Wrundil's eyes turned black. She threatened death.
-
-Xanthe fought. Her bolt-guisarme ripped open Wrundil's seaweed-flesh chest. Wrundil fell, dying, still begging Xanthe to take the gift. *"It's not a gift anymore. It's a burden."* Tuck Tuck delivered the mercy kill — a dagger to the heart, as gentle as possible, with a mixture of mercy and disgust. Wrundil's body decomposed into plant matter, consumed by insects and dung beetles. As she dissolved, a final whisper: *Xanthe*.
-
-The ore was abandoned. The company was shaken. Tuck Tuck saw in Wrundil's desperate love something he craves and envied Xanthe for receiving it. Savari walked away, questioning whether they had honored their oaths. Whether there was a right answer remains unclear.
-
-*Other myths stir beneath the realm. The company may not recognize them until they have run their course.*
+Ector gave the company conflicting guidance regarding the Lady of the Pond: do what she says, but don't accept any more gifts. The company has not returned to him since.
 
 ---
 

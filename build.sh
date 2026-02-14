@@ -19,6 +19,13 @@ for realm in braeburn cloverfell ferngully; do
     --source "$realm" \
     --destination "_site/$realm" \
     --config "$realm/_config.yml"
+
+  # Jekyll copies symlinks verbatim; replace with the real shared files
+  if [ -L "_site/$realm/assets/css/style.css" ]; then
+    rm "_site/$realm/assets/css/style.css"
+    cp _shared/assets/css/style.css "_site/$realm/assets/css/style.css"
+    echo "  resolved shared CSS for $realm"
+  fi
 done
 
 touch _site/.nojekyll
